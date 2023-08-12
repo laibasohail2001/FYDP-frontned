@@ -4,18 +4,13 @@ import { StyleSheet, Text, View, ScrollView, ActivityIndicator, Image} from 'rea
 import Weather from '../screens/components/Weather';
 import SearchBar from '../screens/components/SearchBar';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-
-
 const API_KEY = "e2e5f2b4abcd826836660ebeb7b280e1";
-
-
 export default function App() {
   
     const [weatherData, setWeatherData] = useState(null);
     const [loaded, setLoaded] = useState(true);
-
     async function fetchWeatherData(cityName) {
-        setLoaded(false);
+    setLoaded(false);
         const API = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`
         try {
             const response = await fetch(API);

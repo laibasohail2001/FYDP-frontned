@@ -8,8 +8,9 @@ import IdentifyProblem from './screens/IdentifyProblem';
 import Pest from './screens/Pest';
 import Weather from './screens/Weather';
 
-
-import Camera from './screens/Camera'; // Import the AnotherScreen component
+// Import the AnotherScreen component
+import Camera from './screens/Camera'; 
+import Gallery from './screens/Gallery'
 import LeafRust from './screens/LeafRust';
 import LooseSmut from './screens/LooseSmut';
 import RootRot from './screens/RootRot';
@@ -30,7 +31,7 @@ function TabNavigator() {
       inactiveBackgroundColor: 'lightgray', // Background color of inactive tab
     }}
     >
-      <Tab.Screen 
+    <Tab.Screen 
       name="Identify The Problem" 
       component={IdentifyProblem}
       options={{
@@ -80,6 +81,7 @@ function App() {
        
         {/* Use AnotherScreen outside of the TabNavigator */}
         <Stack.Screen name="Camera" component={Camera} />
+        <Stack.Screen name="Gallery" component={Gallery} />
         <Stack.Screen name="LeafRust" component={LeafRust} />
         <Stack.Screen name="LooseSmut" component={LooseSmut} />
         <Stack.Screen name="RootRot" component={RootRot} />

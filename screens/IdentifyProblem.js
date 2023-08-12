@@ -5,9 +5,12 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 function IdentifyProblem({ navigation }) {
-  const navigateToAnotherScreen = () => {
-    navigation.navigate('Camera');
+  const navigateToCameraScreen = () => {
+    navigation.navigate('Camera');}
+  const navigateToGalleryScreen = () => {
+    navigation.navigate('Gallery');
   };
+ 
   function Flashcard({label, imagePath}) {
     return (
       <View style={styles.card}>
@@ -44,12 +47,12 @@ function IdentifyProblem({ navigation }) {
         </View>
         </View>
       <View >
-        <TouchableOpacity style={styles.button} onPress={navigateToAnotherScreen}>
+        <TouchableOpacity style={styles.button} onPress={navigateToCameraScreen}>
         
         <Text style={styles.buttonText}>Take a Picture</Text>
         </TouchableOpacity>
         <Text style={styles.buttonText} marginTop={"2%"} marginBottom={"2%"}>OR</Text>
-        <TouchableOpacity style={styles.button}  onPress={navigateToAnotherScreen}>
+        <TouchableOpacity style={styles.button}  onPress={navigateToGalleryScreen}>
         <Text style={styles.buttonText}>Select From The Gallery</Text>
         </TouchableOpacity>
       {/* <Button title="Take a Picture"  onPress={navigateToAnotherScreen} />  */}
